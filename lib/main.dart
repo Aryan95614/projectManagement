@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Data/constants.dart';
-
+import 'Widgets/BottomNav.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -45,10 +45,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-
+            Text("changed")
           ]
         ),
       ),
+     bottomNavigationBar: bottomNav(),
 
     );
   }
