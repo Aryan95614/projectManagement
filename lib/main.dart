@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
-import 'Data/constants.dart';
+import 'package:projectmanagement/Functions.dart';
+import 'Data/Constants.dart';
 import 'Widgets/BottomNav.dart';
+
+
+import 'Pages/ChatGpt.dart';
+import 'Pages/Course.dart';
+import 'Pages/Tasks.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -17,6 +24,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepOrange,
       ),
       home: MyHomePage(title: constants["titleOnPage"]),
+      routes: {
+        "/chatGptPage" : (context) => Querying(title: constants["chatgptPageInfo"]),
+        "/courseOutlook": (context) => Course(title: constants["coursePageInfo"]),
+      },
     );
   }
 }
