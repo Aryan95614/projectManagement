@@ -13,6 +13,11 @@ class functions {
     return Data.data[address];
   }
 
+  static getConstantRoute(String finderIndex, int index) {
+    // this function just simplifies some of the
+    // index getters we have
+    return constants[finderIndex][index];
+  }
   static Map<String, WidgetBuilder>? retrieveRoutes(BuildContext Context){
     // We need to retrieve the routes
     // so the main.dart can compute
@@ -21,7 +26,7 @@ class functions {
     Map<String, WidgetBuilder> objects = {};
 
     for(int index = 0; index < constants["routes"].length; index++) {
-      objects.addAll({constants["routes"][index]:  (Context) => Tasks(title: constants["pageTitles"][index])});
+      objects.addAll({getConstantRoute("routes",index):  (Context) => getConstantRoute(constants["pages"], index)(title: getConstantRoute("pageTitles", index))});
     }
     return objects;
   }
