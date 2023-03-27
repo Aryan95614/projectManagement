@@ -18,7 +18,7 @@ class _CourseState extends State<Course> {
       body: SingleChildScrollView(
         child: Stack(
           children: [
-            Text("Hello"),
+
           ],
         ),
       ),

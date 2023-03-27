@@ -5,7 +5,6 @@ class dataclass {
 
   //constructor
   dataclass() {
-
     // It is extremely important
     // to not have this in the constructor
     setVariables();

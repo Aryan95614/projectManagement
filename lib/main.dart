@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:projectmanagement/Functions.dart';
+import 'package:flutter/material.dart';
 import 'Data/Constants.dart';
 import 'Widgets/BottomNav.dart';
 
@@ -19,15 +19,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: '',
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
       home: MyHomePage(title: constants["titleOnPage"]),
-      routes: {
-        "/chatGptPage" : (context) => Querying(title: constants["chatgptPageInfo"]),
-        "/courseOutlook": (context) => Course(title: constants["coursePageInfo"]),
-      },
+      // routes: functions.retrieveRoutes(context)
     );
   }
 }
@@ -56,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("changed")
+            Text("cwerd")
           ]
         ),
       ),
