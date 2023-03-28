@@ -3,6 +3,8 @@ import 'package:projectmanagement/Data/Constants.dart';
 import 'package:projectmanagement/Pages/Tasks.dart';
 import 'package:collection/collection.dart';
 import 'Data/data.dart';
+import 'Pages/ChatGpt.dart';
+import 'Pages/Course.dart';
 
 class functions {
 
@@ -13,21 +15,29 @@ class functions {
     return Data.data[address];
   }
 
-  static getConstantRoute(String finderIndex, int index) {
-    // this function just simplifies some of the
-    // index getters we have
-    return constants[finderIndex][index];
-  }
-  static Map<String, WidgetBuilder>? retrieveRoutes(BuildContext Context){
+
+  static Map<String, WidgetBuilder>? retrieveRoutes(BuildContext Context) {
     // We need to retrieve the routes
     // so the main.dart can compute
     // the addresses
 
     Map<String, WidgetBuilder> objects = {};
-
-    for(int index = 0; index < constants["routes"].length; index++) {
-      objects.addAll({getConstantRoute("routes",index):  (Context) => getConstantRoute(constants["pages"], index)(title: getConstantRoute("pageTitles", index))});
+    for (PageDataClasses element in constants["information"]) {
+      objects.addAll(
+          {element.routes: (Context) => element.Page(title: element.Title)});
     }
     return objects;
+  }
+}
+
+class PageDataClasses {
+  dynamic Page = "";
+  String Title = "";
+  String routes = "";
+
+  PageDataClasses(dynamic page, String Title, String route) {
+    this.Page = page;
+    this.Title = Title;
+    this.routes = route;
   }
 }

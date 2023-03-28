@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:projectmanagement/Functions.dart';
 import 'package:projectmanagement/Pages/Tasks.dart';
 import 'package:projectmanagement/Pages/Course.dart';
 import 'package:projectmanagement/Pages/ChatGpt.dart';
 
 Map<String, dynamic> constants = {
   // main.dart values
-  "titleOnPage" : "Task Management App",
-
+  "titleOnPage": "Task Management App",
 
   //commands
-  "purge" : "Clear",
-
+  "purge": "Clear",
 
   // Routes information
 
@@ -20,16 +19,21 @@ Map<String, dynamic> constants = {
     "/tasksUpkeep", // Course Information
   ],
   // Page information
-  "pageTitles" : [
+  "pageTitles": [
     "Tasks", // Tasks Page
     "Chatgpt", // ChatGpt Page
     "BrightSpace", // Course Information
   ],
 
-  "pages" : [
-     Tasks, // Tasks Page
-     Querying, // ChatGpt Page
-     Course, // Course Information
+  "pages": [
+    Tasks, // Tasks Page
+    Querying, // ChatGpt Page
+    Course, // Course Information
   ],
 
+  "information": [
+    PageDataClasses(Tasks, "Tasks", "/tasksUpkeep"),
+    PageDataClasses(Querying, "Chatgpt", "/chatGptPage"),
+    PageDataClasses(Course, "BrightSpace", "/courseOutlook")
+  ]
 };
