@@ -20,6 +20,7 @@ class dataclass {
   }
 
 
+
   set datas (String message) {
 
    if(message == constants["purge"]){

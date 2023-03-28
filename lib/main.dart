@@ -18,13 +18,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    constants["context"].add(context);
     return MaterialApp(
       title: '',
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
       home: MyHomePage(title: constants["titleOnPage"]),
-      // routes: functions.retrieveRoutes(context)
+      routes: functions.retrieveRoutes(context)
     );
   }
 }

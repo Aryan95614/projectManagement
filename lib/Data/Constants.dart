@@ -32,8 +32,12 @@ Map<String, dynamic> constants = {
   ],
 
   "information": [
-    PageDataClasses(Tasks, "Tasks", "/tasksUpkeep"),
-    PageDataClasses(Querying, "Chatgpt", "/chatGptPage"),
-    PageDataClasses(Course, "BrightSpace", "/courseOutlook")
-  ]
+    PageDataClasses(Tasks, "Tasks", "/tasksUpkeep"), // 0
+    PageDataClasses(Querying, "Chatgpt", "/chatGptPage"), // 1
+    PageDataClasses(Course, "BrightSpace", "/courseOutlook") // 2
+  ],
+
+  "context": [
+
+  ],
 };
