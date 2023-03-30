@@ -2,7 +2,7 @@
  
 Task Management App with Flutter
 
-Welcome to my latest project, a brightspace like built with Flutter. This app provides an easy-to-use interface for managing daily tasks, using chatgpt, including a CNN as well as personalized task recommendations based on user behavior.
+Welcome to my latest project, a brightspace like app built with Flutter. This app provides an easy-to-use interface for managing daily tasks, using chatgpt, including a CNN as well as personalized task recommendations based on user behavior.
 
 ## Features
 
